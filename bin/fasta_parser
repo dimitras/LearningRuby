@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'fasta_parser'
+
+
+@fp=FastaParser.open(ARGV[0]) # run with argument: ruby -Ilib ./bin/fasta_parser ./test/fasta10entries.fna
+@fp.each do |entry| 
+	puts entry.gi #just get all GIs
+end
